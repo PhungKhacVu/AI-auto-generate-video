@@ -1,0 +1,148 @@
+{
+  "version": "1.0",
+  "renderer": "hyperframes",
+  "aspect": "9:16",
+  "metadata": {
+    "title": "Một trăm mili giây có thể làm mất người xem",
+    "source": {
+      "url": "local://subtitle-sync-blueprint",
+      "domain": "local",
+      "image": null
+    },
+    "channel": "AI Coding"
+  },
+  "voice": {
+    "provider": "omnivoice",
+    "speed": 1.0
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "voiceText": "Bạn đang mất hàng ngàn lượt xem chỉ vì lỗi một trăm mili giây.",
+      "templateId": "frame-liquid-bg-hero",
+      "inputs": {
+        "kicker": "KINETIC TYPOGRAPHY",
+        "headline": "100 mili-giây",
+        "subheadline": "Một độ trễ nhỏ có thể làm người xem lướt qua.",
+        "cta": "Xem lý do",
+        "brand": "AI Coding",
+        "headline_from": "#ff4d4d",
+        "headline_to": "#ffd166"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "body-algorithm",
+      "type": "body",
+      "voiceText": "Thuật toán Facebook ưu tiên thời gian xem. Hơn tám mươi lăm phần trăm khán giả lướt video trong trạng thái tắt tiếng.",
+      "templateId": "frame-bold-poster",
+      "inputs": {
+        "kicker": "FACEBOOK ALGORITHM",
+        "date": "85% KHÁN GIẢ",
+        "figure": "85%",
+        "headline": ["Thời gian", "xem là", "tín hiệu"],
+        "standfirst": "Phụ đề phải xuất hiện đúng lúc để giữ kết nối với người xem.",
+        "footer_left": "AI Coding",
+        "footer_right": "WATCH TIME"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "body-trap",
+      "type": "body",
+      "voiceText": "Nhưng đây là một cái bẫy. Nếu phụ đề hiện trễ hơn tiếng chỉ một trăm mili giây, người xem bắt đầu cảm thấy khó chịu.",
+      "templateId": "frame-glitch-title",
+      "inputs": {
+        "title": "CÁI BẪY",
+        "subtitle": "PHỤ ĐỀ TRỄ · MẤT KẾT NỐI · LƯỚT QUA"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "body-consequence",
+      "type": "body",
+      "voiceText": "Chỉ bằng một cái chớp mắt, sự mất đồng bộ này có thể tàn phá điểm giữ chân. Chữ và tiếng không còn đi cùng nhau trong nhận thức của người xem.",
+      "templateId": "frame-build-minimal",
+      "inputs": {
+        "eyebrow": "SYNC ERROR",
+        "hero": "LỆCH NHỊP",
+        "desc": "Một khoảng trễ rất ngắn cũng đủ làm trải nghiệm bị đứt gãy.",
+        "side_left": "Âm thanh",
+        "side_right": "Phụ đề"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "body-result",
+      "type": "body",
+      "voiceText": "Ngược lại, nếu chữ và tiếng khớp nhau hoàn hảo, thời gian xem trung bình có thể tăng từ bốn mươi đến sáu mươi phần trăm. Đây là điểm nhỏ nhưng tạo khác biệt lớn.",
+      "templateId": "frame-pentagram-stat",
+      "inputs": {
+        "label": "KHI ĐỒNG BỘ",
+        "headline": "40–60%",
+        "subtitle": "Mức tăng thời gian xem được nêu trong blueprint.",
+        "anchor": "60",
+        "footer_left": "AI Coding",
+        "footer_right": "SYNC MATTERS"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "body-professional",
+      "type": "body",
+      "voiceText": "Việc soi từng khung hình rất mất thời gian, nhưng đó là ranh giới của sự chuyên nghiệp. Đừng phó mặc hoàn toàn cho AI tự tạo chữ.",
+      "templateId": "frame-bold-poster",
+      "inputs": {
+        "kicker": "EDITORIAL STANDARD",
+        "date": "FRAME BY FRAME",
+        "figure": "SYNC",
+        "headline": ["Đừng để AI", "tự đoán", "nhịp chữ"],
+        "standfirst": "Hãy kiểm tra phụ đề bằng tai, bằng mắt và theo từng khung hình quan trọng.",
+        "footer_left": "AI Coding",
+        "footer_right": "PRO EDITING"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Để không quên mẹo này khi dựng video, hãy gửi video vào Messenger cho chính bạn, hoặc gửi người bạn quay dựng để lưu lại ngay nhé.",
+      "templateId": "frame-logo-outro",
+      "inputs": {
+        "brand_name": "AI Coding",
+        "tagline": "Lưu mẹo dựng video quan trọng",
+        "primary_url": "https://aicodingvn.vercel.app/"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    }
+  ]
+}

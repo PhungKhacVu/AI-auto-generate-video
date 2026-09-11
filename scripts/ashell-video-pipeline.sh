@@ -7,7 +7,7 @@
 #   2) Chuẩn hóa từng clip về video dọc 1080x1920, 30 FPS, H.264.
 #   3) Ghép các clip bằng concat demuxer.
 #   4) Lồng voice.mp3/m4a/wav.
-#   5) Tùy chọn trộn music.mp3 với âm lượng nhỏ.
+#   5) Tùy chọn trộn music.mp3 với âm lượng nhỏ và tự động ducking theo voice.
 #   6) Tùy chọn burn phụ đề .srt hoặc .ass.
 #
 # Tương thích với sh của a-Shell; không phụ thuộc Node.js, Python hay Docker.
@@ -34,6 +34,7 @@
 #   --height N         Chiều cao; mặc định 1920
 #   --fps N            FPS; mặc định 30
 #   --music-volume N   Âm lượng nhạc 0.0-1.0; mặc định 0.12
+#   --no-ducking       Tắt tự động hạ nhạc khi có voice; dùng mix cố định
 #   --keep-temp        Giữ file trung gian để debug
 #   -h, --help         Hiển thị hướng dẫn
 
@@ -44,6 +45,7 @@ WIDTH=1080
 HEIGHT=1920
 FPS=30
 MUSIC_VOLUME=0.12
+DUCKING=1
 KEEP_TEMP=0
 
 usage() {
@@ -134,6 +136,10 @@ while [ "$#" -gt 0 ]; do
       MUSIC_VOLUME=$2
       shift 2
       ;;
+    --no-ducking)
+      DUCKING=0
+      shift
+      ;;
     --keep-temp)
       KEEP_TEMP=1
       shift
@@ -205,6 +211,7 @@ echo "Music:      ${MUSIC:-không dùng}"
 echo "Subtitles:  ${SUBTITLES:-không dùng}"
 echo "Output:     $OUTPUT"
 echo "Canvas:     ${WIDTH}x${HEIGHT} @ ${FPS}fps"
+echo "Music duck: $([ "$DUCKING" -eq 1 ] && printf 'on' || printf 'off')"
 echo
 
 echo "[1/5] Chuẩn hóa $CLIP_COUNT clip..."
@@ -253,11 +260,17 @@ WITH_AUDIO="$TMP_DIR/video-audio.mp4"
 
 if [ -n "$MUSIC" ]; then
   # Input 0: video silent; input 1: voice; input 2: music loop.
+  if [ "$DUCKING" -eq 1 ]; then
+    # Nhạc được hạ tự động khi voice vượt threshold. Voice vẫn giữ nguyên.
+    FILTER="[1:a]aresample=24000,asetpts=N/SR/TB,asplit=2[voice_sc][voice_mix];[2:a]aresample=24000,volume=${MUSIC_VOLUME}[music];[music][voice_sc]sidechaincompress=threshold=0.04:ratio=8:attack=15:release=350:makeup=1[ducked];[voice_mix][ducked]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[aout]"
+  else
+    FILTER="[1:a]aresample=24000[voice];[2:a]aresample=24000,volume=${MUSIC_VOLUME}[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=2:normalize=0[aout]"
+  fi
   ffmpeg -nostdin -hide_banner -loglevel error -y \
     -i "$SILENT_VIDEO" \
     -i "$VOICE" \
     -stream_loop -1 -i "$MUSIC" \
-    -filter_complex "[2:a]volume=${MUSIC_VOLUME}[bg];[1:a][bg]amix=inputs=2:duration=first:dropout_transition=2[aout]" \
+    -filter_complex "$FILTER" \
     -map 0:v:0 \
     -map "[aout]" \
     -c:v copy \

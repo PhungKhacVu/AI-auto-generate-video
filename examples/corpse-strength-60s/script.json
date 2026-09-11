@@ -1,0 +1,183 @@
+{
+  "version": "1.0",
+  "renderer": "hyperframes",
+  "aspect": "9:16",
+  "metadata": {
+    "title": "Một lỗi AI ngớ ngẩn có thể đánh sập cả video",
+    "source": {
+      "url": "local://corpse-strength-case-study",
+      "domain": "local",
+      "image": null
+    },
+    "channel": "AI Coding"
+  },
+  "voice": {
+    "provider": "omnivoice",
+    "speed": 0.92
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "voiceText": "Chỉ một lỗi AI ngớ ngẩn, đánh sập cả một video.",
+      "templateId": "frame-liquid-bg-hero",
+      "inputs": {
+        "kicker": "CASE STUDY",
+        "headline": "Một lỗi AI",
+        "subheadline": "Có thể đánh sập cả video.",
+        "cta": "Xem chuyện gì xảy ra",
+        "brand": "AI Coding",
+        "headline_from": "#f5f5f5",
+        "headline_to": "#ff5c5c"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "context-coach",
+      "type": "body",
+      "voiceText": "Giữa kỷ nguyên công nghệ, một huấn luyện viên đăng video thể hình tâm huyết.",
+      "templateId": "frame-bold-poster",
+      "inputs": {
+        "kicker": "DOCUMENTARY CASE",
+        "date": "CHAPTER 01",
+        "figure": "01",
+        "headline": ["Tâm huyết", "được đưa", "lên mạng"],
+        "standfirst": "Một video thể hình được dựng với niềm tin vào hệ thống tự động.",
+        "footer_left": "AI Coding",
+        "footer_right": "CASE STUDY"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "ai-misheard",
+      "type": "body",
+      "voiceText": "Nhưng anh không ngờ, hệ thống AI tự động đã nghe nhầm từ khóa.",
+      "templateId": "frame-glitch-title",
+      "inputs": {
+        "title": "NGHE NHẦM",
+        "subtitle": "AI ERROR · SIGNAL LOST · REBUILD"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "core-strength",
+      "type": "body",
+      "voiceText": "Chuyên gia Parker Miller từ OpusClip kể lại sự cố dở khóc dở cười: AI biến core strength, tức là sức mạnh cốt lõi, thành corpse strength, nghĩa là sức mạnh của thi thể.",
+      "templateId": "frame-aicoding-comparison",
+      "inputs": {
+        "badge": "AI TRANSLATION",
+        "pre": "Core",
+        "vs": "vs",
+        "post": "Corpse",
+        "left": {
+          "label": "CORE",
+          "from": "#ffd166",
+          "to": "#ff7a3d",
+          "icon": "💪",
+          "bullets": ["Sức mạnh cốt lõi", "Ý nghĩa đúng"],
+          "stat": "OK",
+          "stat_label": "Bản gốc",
+          "win": true
+        },
+        "right": {
+          "label": "CORPSE",
+          "from": "#ff4d6d",
+          "to": "#8b5cf6",
+          "icon": "⚠️",
+          "bullets": ["Sức mạnh của thi thể", "Ý nghĩa sai"],
+          "stat": "ERR",
+          "stat_label": "AI đọc nhầm",
+          "win": false
+        }
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "trust-damage",
+      "type": "body",
+      "voiceText": "Hơn tám mươi lăm phần trăm khán giả xem video trong trạng thái tắt tiếng. Họ hoàn toàn tin vào phụ đề, và uy tín của chuyên gia bỗng chốc biến thành trò cười.",
+      "templateId": "frame-pentagram-stat",
+      "inputs": {
+        "label": "SILENT VIEWING",
+        "headline": "85%",
+        "subtitle": "Khán giả có thể phụ thuộc vào phụ đề khi xem video.",
+        "anchor": "85",
+        "footer_left": "TRUST",
+        "footer_right": "CAPTIONS"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "human-filter",
+      "type": "body",
+      "voiceText": "Bài học ở đây rất rõ ràng: công nghệ là đòn bẩy, nhưng con người là bộ lọc.",
+      "templateId": "frame-build-minimal",
+      "inputs": {
+        "eyebrow": "THE LESSON",
+        "hero": "BỘ LỌC",
+        "desc": "Công nghệ khuếch đại năng lực, nhưng không thay thế khâu kiểm tra.",
+        "side_left": "Công nghệ",
+        "side_right": "Con người"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "review-every-word",
+      "type": "body",
+      "voiceText": "Hãy rà soát từng chữ một trước khi đăng. Đặc biệt là những phụ đề được tạo hoàn toàn tự động.",
+      "templateId": "frame-creative-voltage",
+      "inputs": {
+        "meta": "EDITORIAL STANDARD",
+        "display_lines": ["Rà soát", "từng chữ"],
+        "accent_index": 1,
+        "script": "CHECK",
+        "caption": "Đừng phó mặc hoàn toàn cho AI."
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Nghĩ đến một người bạn hay làm video một mình? Hãy gửi thước phim này vào tin nhắn cho họ, như một lời nhắc nhở nhẹ nhàng trên hành trình sáng tạo nhé.",
+      "templateId": "frame-logo-outro",
+      "inputs": {
+        "brand_name": "AI Coding",
+        "tagline": "Lưu lại trước khi đăng video",
+        "primary_url": "https://aicodingvn.vercel.app/"
+      },
+      "sfx": {
+        "name": "none",
+        "volume": 0.0,
+        "startOffsetSec": 0
+      }
+    }
+  ]
+}

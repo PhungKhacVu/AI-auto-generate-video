@@ -1,0 +1,155 @@
+{
+  "version": "1.0",
+  "renderer": "hyperframes",
+  "aspect": "9:16",
+  "metadata": {
+    "title": "Meta 2026: Đừng làm reaction xào nấu như thế này",
+    "source": {
+      "url": "local://meta-originality-2026",
+      "domain": "local",
+      "image": null
+    },
+    "channel": "AI Coding"
+  },
+  "voice": {
+    "provider": "omnivoice",
+    "speed": 1.0
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "voiceText": "Bạn nghĩ chỉ cần ngồi nhìn và gật gù theo video là sẽ có hàng triệu view?",
+      "templateId": "frame-liquid-bg-hero",
+      "inputs": {
+        "kicker": "META 2026 WARNING",
+        "headline": "Reaction xào nấu",
+        "subheadline": "Không còn là lối tắt an toàn.",
+        "cta": "Xem luật chơi mới",
+        "brand": "AI Coding",
+        "headline_from": "#ff4d4d",
+        "headline_to": "#ffd166"
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "rule-change",
+      "type": "body",
+      "voiceText": "Quên đi. Năm hai nghìn không trăm hai mươi sáu, Meta đã thay đổi luật chơi.",
+      "templateId": "frame-glitch-title",
+      "inputs": {
+        "title": "LUẬT CHƠI MỚI",
+        "subtitle": "META 2026 · ORIGINALITY · WARNING"
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "copy-behavior",
+      "type": "body",
+      "voiceText": "Nếu bạn chỉ ghép clip, làm biểu cảm khuôn mặt, hoặc đọc lại những gì đã có sẵn trên màn hình, AI có thể đánh dấu bạn là sao chép.",
+      "templateId": "frame-bold-poster",
+      "inputs": {
+        "kicker": "NON-ORIGINAL CONTENT",
+        "date": "RISK SIGNAL",
+        "figure": "COPY",
+        "headline": ["Chỉ xem", "chỉ ghép", "chỉ đọc lại"],
+        "standfirst": "Không có đóng góp đáng kể thì reaction dễ trở thành nội dung sao chép.",
+        "footer_left": "AI Coding",
+        "footer_right": "ORIGINALITY"
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "consequence",
+      "type": "body",
+      "voiceText": "Hậu quả là video có thể bị giảm mức độ phân phối, không được đề xuất, và kênh có thể bị tắt kiếm tiền.",
+      "templateId": "frame-aicoding-list",
+      "inputs": {
+        "title": "Ba rủi ro",
+        "accent": "có thể gặp",
+        "accent_from": "#ff4d4d",
+        "accent_to": "#ff7a3d",
+        "subtitle": "Nội dung thiếu đóng góp mới sẽ chịu nhiều bất lợi.",
+        "items": [
+          { "icon": "📉", "title": "Giảm phân phối", "desc": "Ít cơ hội tiếp cận người mới", "tag": "Reach", "level": "danger" },
+          { "icon": "🚫", "title": "Không đề xuất", "desc": "Khó xuất hiện trong gợi ý", "tag": "Risk", "level": "warn" },
+          { "icon": "💸", "title": "Tắt kiếm tiền", "desc": "Ảnh hưởng trực tiếp doanh thu", "tag": "Money", "level": "danger" }
+        ]
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "way-out",
+      "type": "body",
+      "voiceText": "Vậy lối thoát là gì? Hãy xuất hiện trực diện và đưa ra các phân tích mới.",
+      "templateId": "frame-build-minimal",
+      "inputs": {
+        "eyebrow": "THE WAY OUT",
+        "hero": "PHÂN TÍCH",
+        "desc": "Đừng chỉ phản ứng. Hãy thêm góc nhìn mà người xem chưa có.",
+        "side_left": "Xuất hiện",
+        "side_right": "Đóng góp"
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "remix-value",
+      "type": "body",
+      "voiceText": "Bạn cũng có thể nâng cấp cốt truyện một cách rõ ràng, hoặc bổ sung thông tin mới để video phối lại thực sự có giá trị.",
+      "templateId": "frame-aicoding-comparison",
+      "inputs": {
+        "badge": "REMIX ĐÚNG CÁCH",
+        "pre": "Xào nấu",
+        "vs": "vs",
+        "post": "Đóng góp",
+        "left": {
+          "label": "COPY",
+          "from": "#ff4d6d",
+          "to": "#8b5cf6",
+          "icon": "🚫",
+          "bullets": ["Chỉ xem cùng", "Không thêm giá trị"],
+          "stat": "RISK",
+          "stat_label": "Thiếu nguyên bản",
+          "win": false
+        },
+        "right": {
+          "label": "REMIX",
+          "from": "#34d399",
+          "to": "#22d3ee",
+          "icon": "✅",
+          "bullets": ["Phân tích mới", "Nâng cấp câu chuyện"],
+          "stat": "VALUE",
+          "stat_label": "Có đóng góp",
+          "win": true
+        }
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "core-lesson",
+      "type": "body",
+      "voiceText": "Đừng trở thành cái bóng của người khác. Phải tạo ra giá trị mới, đó mới là luật sinh tồn.",
+      "templateId": "frame-creative-voltage",
+      "inputs": {
+        "meta": "CORE LESSON",
+        "display_lines": ["Tạo ra", "giá trị mới"],
+        "accent_index": 1,
+        "script": "VALUE",
+        "caption": "Công nghệ chỉ là đòn bẩy."
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Kênh của bạn bè bạn có đang làm sai cách này? Hãy gửi ngay video này để cứu lấy kênh của họ nhé.",
+      "templateId": "frame-logo-outro",
+      "inputs": {
+        "brand_name": "AI Coding",
+        "tagline": "Gửi cho người đang làm content",
+        "primary_url": "https://aicodingvn.vercel.app/"
+      },
+      "sfx": { "name": "none", "volume": 0.0, "startOffsetSec": 0 }
+    }
+  ]
+}
